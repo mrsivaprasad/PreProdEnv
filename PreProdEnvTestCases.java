@@ -61,15 +61,13 @@ public class TestEnvTestCases {
   
  }
  @Test
-		public void emailexist(){
-			Register n=new Register("","","1","");
-			assertEquals("Email ID is Already Registered.",n.InsertDetails());			
-		}
-		@Test
-		public void emailnotexist(){
-			Register n=new Register("","","vinodh","");
-			assertEquals("Your can Register.",n.checkDetails());	
-		}
- 
- 
+ public void emailexist(){
+	Register n=new Register("","","1","");
+	assertEquals("Email ID is Already Registered.",n.InsertDetails());			
+}
+@Test
+public void emailnotexist(){
+	Register n=new Register("","","vinodh","");
+	assertEquals("Your can Register.",n.checkDetails());	
+}
 }
