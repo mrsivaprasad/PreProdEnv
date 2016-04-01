@@ -55,7 +55,7 @@ public class TestEnvTestCases {
   assertEquals("Login Failed.",n.validate());
   }
   @Test
- public void bothgivenbutloginfails(){
+ public void bothgivenbutloginfails1(){
   Login n=new Login("dummy","dummy");
   assertEquals("Login Failed.",n.validate());
   
