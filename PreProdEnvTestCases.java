@@ -2,7 +2,7 @@ import com.netenrich.*;
 import java.sql.*;
 import static org.junit.Assert.*;
 import org.junit.Test;
-public class TestEnvTestCases {
+public class PreProdEnvTestCases {
  DatabaseDetails main = new DatabaseDetails();
  public String database_url = main.Databaseurl();
  public String database_username = main.Databaseusername();
