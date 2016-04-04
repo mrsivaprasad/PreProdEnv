@@ -68,6 +68,6 @@ public class PreProdEnvTestCases {
 @Test
 public void emailnotexist(){
 	Register n=new Register("","","vinodh","");
-	assertEquals("Your can Register",n.checkDetails());	
+	assertEquals("Your can Register.",n.checkDetails());	
 }
 }
