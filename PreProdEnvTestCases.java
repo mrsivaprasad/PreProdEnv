@@ -8,23 +8,23 @@ public class PreProdEnvTestCases {
  public String database_username = main.Databaseusername();
  public String database_password = main.Databasepassword();
  @Test
- public void Databasetest(){
+ public void databaseConnectionTest(){
   Databaseconnection db_connection = new Databaseconnection(database_username,database_password,database_url);
   java.sql.Connection connection = db_connection.Access_Database();
   assertNotNull(connection);
  }
  @Test
- public void bothgivencorrect(){
+ public void bothUsernameAndPasswordGivenCorrect(){
   Login n=new Login("1","1");
   assertEquals("You are logged in.",n.validate());
  }
  @Test
- public void bothgivenwrong(){
+ public void bothUsernameAndPasswordGivenWrong(){
   Login n=new Login("username","password");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void bothareOmitted(){
+ public void bothUsernameAndPasswordAreOmitted(){
   Login n=new Login("","");
   assertEquals("Login Failed.",n.validate());
   
@@ -40,33 +40,33 @@ public class PreProdEnvTestCases {
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void wrongusername(){
+ public void wrongUsername(){
   Login n=new Login("wrongusername","password");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void wrongpassword(){
+ public void wrongPassword(){
   Login n=new Login("username","password1");
   assertEquals("Login Failed.",n.validate());
  }
  @Test
- public void bothgivenbutloginfails(){
+ public void bothGivenButLoginFails(){
   Login n=new Login("","");
   assertEquals("Login Failed.",n.validate());
   }
   @Test
- public void bothgivenbutloginfails1(){
+ public void bothGivenButLoginFailsAgain(){
   Login n=new Login("dummy","dummy");
   assertEquals("Login Failed.",n.validate());
   
  }
  @Test
- public void emailexist(){
+ public void emailExists(){
 	Register n=new Register("","","1","");
 	assertEquals("Email ID is Already Registered.",n.InsertDetails());			
 }
 @Test
-public void emailnotexist(){
+public void emailNotExists(){
 	Register n=new Register("","","vinodh","");
 	assertEquals("Your can Register.",n.checkDetails());	
 }
