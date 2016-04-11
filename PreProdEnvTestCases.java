@@ -47,7 +47,7 @@ public class PreProdEnvTestCases {
  @Test
  public void wrongPassword(){
   Login n=new Login("username","password1");
-  assertEquals("Login Failed.",n.validate());
+  assertEquals("Login Failed",n.validate());
  }
  @Test
  public void bothGivenButLoginFails(){
@@ -68,6 +68,6 @@ public class PreProdEnvTestCases {
 @Test
 public void emailNotExists(){
 	Register n=new Register("","","vinodh","");
-	assertEquals("Your can Register.",n.checkDetails());	
+	assertEquals("You can Register.",n.checkDetails());	
 }
 }
