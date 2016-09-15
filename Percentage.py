@@ -3,7 +3,8 @@ import os
 def functionName( percentage ):
     if percentage < 40.0:
         raise Exception("BUILD FAILED :" +str(percentage))
-
+    else:
+        echo "Successfully TESTED";
 text_file=open("TEST-PreProdEnvTestCases.txt","r")
 text_file.readline();
 data= text_file.readline();
@@ -21,5 +22,6 @@ tests_success=tests_run-tests_fail;
 tests_data.append(tests_success);
 tests_perc=(float(tests_success)/(tests_run))*100.00;
 tests_data.append(tests_perc);
+#print tests_data;
 functionName(tests_data[-1]);
 text_file.close()
