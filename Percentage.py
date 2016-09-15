@@ -4,7 +4,7 @@ def functionName( percentage ):
     if percentage < 40.0:
         raise Exception("BUILD FAILED :" +str(percentage))
     else:
-        echo "Successfully TESTED"
+        print "Successfully TESTED"
 text_file=open("TEST-PreProdEnvTestCases.txt","r")
 text_file.readline();
 data= text_file.readline();
