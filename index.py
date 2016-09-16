@@ -7,5 +7,5 @@ yaml_data= yaml.load(yaml_file)
 global s;
 global test_percent;
 s='preProdEnv'
-test_percent=yaml_data['test_Servers'][s]
+test_percent=yaml_data['Test_Servers'][s]
 #######################################################
