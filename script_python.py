@@ -6,7 +6,7 @@ def functionName( percentage ):
     else:
         print "BUILD SUCCESS :"+str(str(percentage)+"%")+" => Required "+index.s+" Percentage :"+str(str(index.test_percent)+"%")
         print "Tests RUN :",tests_run,"\nTests Success :",tests_success,"\nTests_Fail :",tests_fail
-text_file=open("TEST-TestEnvTestCases.txt","r")
+text_file=open("TEST-PreProdEnvTestCases.txt","r")
 text_file.readline();
 data= text_file.readline();
 arr= data.split(" ");
